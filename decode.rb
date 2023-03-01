@@ -52,4 +52,10 @@ def decode_word(word)
   result
 end
 
-puts decode_word("-- -.--")
+def decode_text(text)
+  result = ''
+  text.split('   ').each { |word| result += "#{decode_word(word)} " }
+  result
+end
+
+puts decode_text('.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...')
