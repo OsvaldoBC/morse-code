@@ -1,4 +1,4 @@
-morse = {
+MORSE_HASH = {
     
   '.-' => 'A',
   '-...' => 'B',
@@ -41,3 +41,9 @@ morse = {
   '..--..' => '?'
 
 }.freeze
+
+def decode_char(char)
+  MORSE_HASH[char]
+end
+
+puts(decode_char("..-"))
