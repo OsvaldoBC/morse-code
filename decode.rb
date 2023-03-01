@@ -1,5 +1,5 @@
 MORSE_HASH = {
-    
+
   '.-' => 'A',
   '-...' => 'B',
   '-.-.' => 'C',
@@ -46,4 +46,10 @@ def decode_char(char)
   MORSE_HASH[char]
 end
 
-puts(decode_char("..-"))
+def decode_word(word)
+  result = ''
+  word.split.each { |character| result += decode_char(character) }
+  result
+end
+
+puts decode_word("-- -.--")
